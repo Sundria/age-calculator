@@ -67,11 +67,16 @@ form {
     font-size: 32px;
     padding: 20px;
 }
+
 .input-text.active {
     border: 1px solid hsl(0, 100%, 67%);
 }
 
+.input-text:focus {
+    outline: none;
+    border: 1px solid hsl(259, 100%, 65%);
 
+}
 
 button[type="submit"] {
     z-index: 1;
@@ -93,7 +98,6 @@ button[type="submit"] {
     align-items: center;
     justify-content: end;
 }
-
 
 .enviar img {
     align-content: center;
@@ -129,4 +133,13 @@ button[type="submit"] {
 
 .error.show {
     display: block;
+}
+
+.attribution {
+    text-align: center;
+    padding: 30px;
+}
+
+.attribution a {
+    text-decoration: none;
 }

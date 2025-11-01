@@ -40,7 +40,6 @@ enviar.addEventListener("click", (e) => {
     });
 
 
-
     if (valido) {
         if (a > hoje.getFullYear()) {
             ano.nextElementSibling.innerText = "Must be in the past";
@@ -48,6 +47,14 @@ enviar.addEventListener("click", (e) => {
             ano.nextElementSibling.style.display = "block";
             ano.classList.add("active");
             valido = false;
+            return
+        } else if (a < 1900) {
+            ano.nextElementSibling.innerText = "Need to be alive";
+            ano.previousElementSibling.classList.add("ativa");
+            ano.nextElementSibling.style.display = "block";
+            ano.classList.add("active");
+            valido = false;
+            return
         } else {
             ano.previousElementSibling.classList.remove("ativa");
             ano.nextElementSibling.style.display = "none";
@@ -66,7 +73,7 @@ enviar.addEventListener("click", (e) => {
             mes.classList.remove("active");
             valido = true;
         }
-        if(d != nascimento.getDate()){
+        if (d != nascimento.getDate()) {
             dia.nextElementSibling.innerText = "Must be a valid day";
             dia.previousElementSibling.classList.add("ativa");
             dia.nextElementSibling.style.display = "block";
@@ -75,31 +82,6 @@ enviar.addEventListener("click", (e) => {
             return
         }
     }
-
-
-
-    //     if (dia.value === "") {
-    //         dia.nextElementSibling.innerText = "This field is required";
-    //         dia.previousElementSibling.classList.add("ativa");
-    //         dia.nextElementSibling.style.display = "block";
-    //         dia.classList.add("active");
-    //         valido = false;
-    //         return
-    //     } else {
-    //         dia.nextElementSibling.innerText = "Must be a valid day";
-    //         dia.previousElementSibling.classList.add("ativa");
-    //         dia.nextElementSibling.style.display = "block";
-    //         dia.classList.add("active");
-    //     }
-
-
-    // }
-    // else {
-    //     dia.previousElementSibling.classList.remove("ativa");
-    //     dia.nextElementSibling.style.display = "none";
-    //     dia.classList.remove("active");
-    //     valido = true;
-    // }
 
 
     if (valido) {

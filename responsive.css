@@ -18,10 +18,11 @@
         gap: 15px;
     }
 
-    .align-content{
+    .align-content {
         padding: 50px 25px;
     }
-    button[type="submit"]{
+
+    button[type="submit"] {
         width: 80px;
         height: 80px;
         background-size: 35px;
